@@ -2,6 +2,11 @@
 
 @implementation TestingUserDefaults
 
++ (id) freshDefaults
+{
+    return [[[self alloc] init] autorelease];
+}
+
 - (id) init
 {
     [super init];

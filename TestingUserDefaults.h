@@ -1,7 +1,5 @@
-@interface TestingUserDefaults : NSObject
-{
-    NSMutableDictionary *data;
-}
+
++ (id) freshDefaults;
 
 - (void) setObject: (id) value forKey: (NSString*) defaultName;
 - (void) setInteger: (NSInteger) value forKey: (NSString*) defaultName;
