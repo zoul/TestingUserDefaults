@@ -1,3 +1,4 @@
+@interface TestingUserDefaults : NSObject {}
 
 + (id) freshDefaults;
 

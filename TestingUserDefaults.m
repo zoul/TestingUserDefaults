@@ -1,6 +1,11 @@
 #import "TestingUserDefaults.h"
 
+@interface TestingUserDefaults ()
+@property(retain) NSMutableDictionary *data;
+@end
+
 @implementation TestingUserDefaults
+@synthesize data;
 
 + (id) freshDefaults
 {
