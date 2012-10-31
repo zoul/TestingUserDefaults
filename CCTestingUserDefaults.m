@@ -31,6 +31,11 @@
     [data setObject:[NSNumber numberWithBool:value] forKey:defaultName];
 }
 
+- (void) removeObjectForKey: (NSString*) defaultName
+{
+    [data removeObjectForKey:defaultName];
+}
+
 - (void) synchronize
 {
     // no-op

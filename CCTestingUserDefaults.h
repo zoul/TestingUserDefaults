@@ -3,6 +3,7 @@
 - (void) setObject: (id) value forKey: (NSString*) defaultName;
 - (void) setInteger: (NSInteger) value forKey: (NSString*) defaultName;
 - (void) setBool: (BOOL) value forKey: (NSString*) defaultName;
+- (void) removeObjectForKey: (NSString*) defaultName;
 
 - (id) objectForKey: (NSString*) defaultName;
 - (NSInteger) integerForKey: (NSString*) defaultName;
