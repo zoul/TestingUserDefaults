@@ -1,28 +1,17 @@
-#import "TestingUserDefaults.h"
+#import "CCTestingUserDefaults.h"
 
-@interface TestingUserDefaults ()
-@property(retain) NSMutableDictionary *data;
+@interface CCTestingUserDefaults ()
+@property(strong) NSMutableDictionary *data;
 @end
 
-@implementation TestingUserDefaults
+@implementation CCTestingUserDefaults
 @synthesize data;
-
-+ (id) freshDefaults
-{
-    return [[[self alloc] init] autorelease];
-}
 
 - (id) init
 {
-    [super init];
-    data = [[NSMutableDictionary alloc] init];
+    self = [super init];
+    [self setData:[NSMutableDictionary dictionary]];
     return self;
-}
-
-- (void) dealloc
-{
-    [data release];
-    [super dealloc];
 }
 
 #pragma mark Writing
@@ -42,7 +31,8 @@
     [data setObject:[NSNumber numberWithBool:value] forKey:defaultName];
 }
 
-- (void) synchronize {
+- (void) synchronize
+{
     // no-op
 }
 
@@ -61,6 +51,17 @@
 - (BOOL) boolForKey: (NSString*) defaultName
 {
     return [[data objectForKey:defaultName] boolValue];
+}
+
+@end
+
+#pragma mark NSUserDefaults Convenience
+
+@implementation NSUserDefaults (Testing)
+
++ (id) transientDefaults
+{
+    return [[CCTestingUserDefaults alloc] init];
 }
 
 @end

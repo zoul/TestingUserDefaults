@@ -1,6 +1,4 @@
-@interface TestingUserDefaults : NSObject {}
-
-+ (id) freshDefaults;
+@interface CCTestingUserDefaults : NSObject
 
 - (void) setObject: (id) value forKey: (NSString*) defaultName;
 - (void) setInteger: (NSInteger) value forKey: (NSString*) defaultName;
@@ -11,5 +9,11 @@
 - (BOOL) boolForKey: (NSString*) defaultName;
 
 - (void) synchronize;
+
+@end
+
+@interface NSUserDefaults (Testing)
+
++ (id) transientDefaults;
 
 @end
