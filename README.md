@@ -5,7 +5,7 @@ This class is a simple `NSUserDefaults` replacement that can be used in tests.
 It does not persist any changes, so that each test can start with precisely
 controlled defaults environment.
 
-    TestingUserDefaults *defaults = [[TestingUserDefaults alloc] init];
+    CCTestingUserDefaults *defaults = [[CCTestingUserDefaults alloc] init];
     // …set up defaults as needed…
     ClassThatUsesDefaults *tested = [[ClassThatUsesDefaults alloc] init];
     [tested setDefaults:(id)defaults];
