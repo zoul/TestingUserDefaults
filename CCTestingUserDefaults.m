@@ -1,59 +1,63 @@
 #import "CCTestingUserDefaults.h"
 
 @interface CCTestingUserDefaults ()
-@property(strong) NSMutableDictionary *data;
+@property (strong) NSMutableDictionary* data;
 @end
 
 @implementation CCTestingUserDefaults
 @synthesize data;
 
-- (id) init
+- (id)init
 {
     self = [super init];
+    if (nil == self) {
+        return nil;
+    }
+
     [self setData:[NSMutableDictionary dictionary]];
     return self;
 }
 
 #pragma mark Writing
 
-- (void) setObject: (id) value forKey: (NSString*) defaultName
+- (void)setObject:(id)value forKey:(NSString*)defaultName
 {
     [data setObject:value forKey:defaultName];
 }
 
-- (void) setInteger: (NSInteger) value forKey: (NSString*) defaultName
+- (void)setInteger:(NSInteger)value forKey:(NSString*)defaultName
 {
     [data setObject:[NSNumber numberWithInteger:value] forKey:defaultName];
 }
 
-- (void) setBool: (BOOL) value forKey: (NSString*) defaultName
+- (void)setBool:(BOOL)value forKey:(NSString*)defaultName
 {
     [data setObject:[NSNumber numberWithBool:value] forKey:defaultName];
 }
 
-- (void) removeObjectForKey: (NSString*) defaultName
+- (void)removeObjectForKey:(NSString*)defaultName
 {
     [data removeObjectForKey:defaultName];
 }
 
-- (void) synchronize
+- (void)synchronize
 {
     // no-op
 }
 
 #pragma mark Reading
 
-- (id) objectForKey: (NSString*) defaultName
+- (id)objectForKey:(NSString*)defaultName
 {
     return [data objectForKey:defaultName];
 }
 
-- (NSInteger) integerForKey: (NSString*) defaultName
+- (NSInteger)integerForKey:(NSString*)defaultName
 {
     return [[data objectForKey:defaultName] integerValue];
 }
 
-- (BOOL) boolForKey: (NSString*) defaultName
+- (BOOL)boolForKey:(NSString*)defaultName
 {
     return [[data objectForKey:defaultName] boolValue];
 }
@@ -64,7 +68,7 @@
 
 @implementation NSUserDefaults (Testing)
 
-+ (id) transientDefaults
++ (id)transientDefaults
 {
     return [[CCTestingUserDefaults alloc] init];
 }
