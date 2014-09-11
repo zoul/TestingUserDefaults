@@ -27,12 +27,27 @@
 
 - (void)setInteger:(NSInteger)value forKey:(NSString*)defaultName
 {
-    [data setObject:[NSNumber numberWithInteger:value] forKey:defaultName];
+    [data setObject:@(value) forKey:defaultName];
+}
+
+- (void)setFloat:(float)value forKey:(NSString*)defaultName
+{
+    [data setObject:@(value) forKey:defaultName];
 }
 
 - (void)setBool:(BOOL)value forKey:(NSString*)defaultName
 {
-    [data setObject:[NSNumber numberWithBool:value] forKey:defaultName];
+    [data setObject:@(value) forKey:defaultName];
+}
+
+- (void)setDouble:(double)value forKey:(NSString*)defaultName
+{
+    [data setObject:@(value) forKey:defaultName];
+}
+
+- (void)setURL:(NSURL*)url forKey:(NSString*)defaultName
+{
+    [data setObject:url forKey:defaultName];
 }
 
 - (void)removeObjectForKey:(NSString*)defaultName
@@ -55,6 +70,16 @@
 - (NSInteger)integerForKey:(NSString*)defaultName
 {
     return [[data objectForKey:defaultName] integerValue];
+}
+
+- (float)floatForKey:(NSString*)defaultName
+{
+    return [[data objectForKey:defaultName] floatValue];
+}
+
+- (double)doubleForKey:(NSString*)defaultName
+{
+    return [[data objectForKey:defaultName] doubleValue];
 }
 
 - (BOOL)boolForKey:(NSString*)defaultName

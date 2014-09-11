@@ -48,6 +48,18 @@
     XCTAssertEqual([self.defaults boolForKey:@"test"], YES);
 }
 
+- (void)testDouble
+{
+    [self.defaults setDouble:0.42 forKey:@"test"];
+    XCTAssertEqualWithAccuracy([self.defaults doubleForKey:@"test"], 0.42, 0.01);
+}
+
+- (void)testFloat
+{
+    [self.defaults setFloat:0.42 forKey:@"test"];
+    XCTAssertEqualWithAccuracy([self.defaults floatForKey:@"test"], 0.42, 0.01);
+}
+
 - (void)testRemoveObject
 {
     NSString* obj = @"Object";
