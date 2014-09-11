@@ -10,9 +10,10 @@
 		D647630F19C208BA00F28E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647630E19C208BA00F28E5B /* Foundation.framework */; };
 		D647631D19C208BA00F28E5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647631C19C208BA00F28E5B /* XCTest.framework */; };
 		D647631E19C208BA00F28E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647630E19C208BA00F28E5B /* Foundation.framework */; };
-		D647632019C208BA00F28E5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647631F19C208BA00F28E5B /* UIKit.framework */; };
 		D647632319C208BA00F28E5B /* libTestingUserDefaults.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D647630B19C208BA00F28E5B /* libTestingUserDefaults.a */; };
 		D647632919C208BA00F28E5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D647632719C208BA00F28E5B /* InfoPlist.strings */; };
+		D647633619C2094F00F28E5B /* CCTestingUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D647633519C2094F00F28E5B /* CCTestingUserDefaults.m */; };
+		D647633819C2096500F28E5B /* CCTestingUserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D647633719C2096500F28E5B /* CCTestingUserDefaultsTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +43,11 @@
 		D647630E19C208BA00F28E5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D647631B19C208BA00F28E5B /* TestingUserDefaultsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingUserDefaultsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D647631C19C208BA00F28E5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D647631F19C208BA00F28E5B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D647632619C208BA00F28E5B /* TestingUserDefaultsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestingUserDefaultsTests-Info.plist"; sourceTree = "<group>"; };
 		D647632819C208BA00F28E5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D647633419C2094F00F28E5B /* CCTestingUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTestingUserDefaults.h; sourceTree = SOURCE_ROOT; };
+		D647633519C2094F00F28E5B /* CCTestingUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTestingUserDefaults.m; sourceTree = SOURCE_ROOT; };
+		D647633719C2096500F28E5B /* CCTestingUserDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTestingUserDefaultsTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +64,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D647631D19C208BA00F28E5B /* XCTest.framework in Frameworks */,
-				D647632019C208BA00F28E5B /* UIKit.framework in Frameworks */,
 				D647631E19C208BA00F28E5B /* Foundation.framework in Frameworks */,
 				D647632319C208BA00F28E5B /* libTestingUserDefaults.a in Frameworks */,
 			);
@@ -94,7 +96,6 @@
 			children = (
 				D647630E19C208BA00F28E5B /* Foundation.framework */,
 				D647631C19C208BA00F28E5B /* XCTest.framework */,
-				D647631F19C208BA00F28E5B /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,6 +103,8 @@
 		D647631019C208BA00F28E5B /* TestingUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				D647633419C2094F00F28E5B /* CCTestingUserDefaults.h */,
+				D647633519C2094F00F28E5B /* CCTestingUserDefaults.m */,
 			);
 			path = TestingUserDefaults;
 			sourceTree = "<group>";
@@ -110,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				D647632519C208BA00F28E5B /* Supporting Files */,
+				D647633719C2096500F28E5B /* CCTestingUserDefaultsTests.m */,
 			);
 			path = TestingUserDefaultsTests;
 			sourceTree = "<group>";
@@ -204,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D647633619C2094F00F28E5B /* CCTestingUserDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D647633819C2096500F28E5B /* CCTestingUserDefaultsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/TestingUserDefaults.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "TestingUserDefaults/TestingUserDefaults-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -320,7 +326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/TestingUserDefaults.dst;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "TestingUserDefaults/TestingUserDefaults-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,7 +342,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "TestingUserDefaults/TestingUserDefaults-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -356,7 +362,7 @@
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "TestingUserDefaults/TestingUserDefaults-Prefix.pch";
 				INFOPLIST_FILE = "TestingUserDefaultsTests/TestingUserDefaultsTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
