@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D6034FE519C213E3006BF900 /* CCTestingUserDefaultsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D6034FE019C213C3006BF900 /* CCTestingUserDefaultsTests.m */; };
+		D61C367419C21C2000831603 /* CCTestingUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D61C367319C21C2000831603 /* CCTestingUserDefaults.m */; };
 		D647630F19C208BA00F28E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647630E19C208BA00F28E5B /* Foundation.framework */; };
 		D647631D19C208BA00F28E5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647631C19C208BA00F28E5B /* XCTest.framework */; };
 		D647631E19C208BA00F28E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647630E19C208BA00F28E5B /* Foundation.framework */; };
 		D647632319C208BA00F28E5B /* libCCTestingUserDefaults.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D647630B19C208BA00F28E5B /* libCCTestingUserDefaults.a */; };
-		D647633619C2094F00F28E5B /* CCTestingUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D647633519C2094F00F28E5B /* CCTestingUserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,12 +41,12 @@
 		D6034FE019C213C3006BF900 /* CCTestingUserDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTestingUserDefaultsTests.m; path = CCTestingUserDefaultsTests/CCTestingUserDefaultsTests.m; sourceTree = SOURCE_ROOT; };
 		D6034FE219C213D7006BF900 /* CCTestingUserDefaultsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CCTestingUserDefaultsTests-Info.plist"; path = "CCTestingUserDefaultsTests/CCTestingUserDefaultsTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D6034FE419C213D7006BF900 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = CCTestingUserDefaultsTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		D61C367219C21C2000831603 /* CCTestingUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTestingUserDefaults.h; path = Classes/CCTestingUserDefaults.h; sourceTree = SOURCE_ROOT; };
+		D61C367319C21C2000831603 /* CCTestingUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTestingUserDefaults.m; path = Classes/CCTestingUserDefaults.m; sourceTree = SOURCE_ROOT; };
 		D647630B19C208BA00F28E5B /* libCCTestingUserDefaults.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCTestingUserDefaults.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D647630E19C208BA00F28E5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D647631B19C208BA00F28E5B /* CCTestingUserDefaultsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCTestingUserDefaultsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D647631C19C208BA00F28E5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D647633419C2094F00F28E5B /* CCTestingUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTestingUserDefaults.h; sourceTree = SOURCE_ROOT; };
-		D647633519C2094F00F28E5B /* CCTestingUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTestingUserDefaults.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +102,8 @@
 		D647631019C208BA00F28E5B /* TestingUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				D647633419C2094F00F28E5B /* CCTestingUserDefaults.h */,
-				D647633519C2094F00F28E5B /* CCTestingUserDefaults.m */,
+				D61C367219C21C2000831603 /* CCTestingUserDefaults.h */,
+				D61C367319C21C2000831603 /* CCTestingUserDefaults.m */,
 			);
 			path = TestingUserDefaults;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D647633619C2094F00F28E5B /* CCTestingUserDefaults.m in Sources */,
+				D61C367419C21C2000831603 /* CCTestingUserDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
