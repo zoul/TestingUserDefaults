@@ -67,6 +67,66 @@
     return [data objectForKey:defaultName];
 }
 
+- (NSString*)stringForKey:(NSString*)defaultName
+{
+    id stringObj = data[defaultName];
+
+    if (![stringObj isKindOfClass:[NSString class]]) {
+        return nil;
+    }
+
+    return stringObj;
+}
+- (NSArray*)arrayForKey:(NSString*)defaultName
+{
+    id arrayObj = data[defaultName];
+
+    if (![arrayObj isKindOfClass:[NSArray class]]) {
+        return nil;
+    }
+
+    return arrayObj;
+}
+
+- (NSDictionary*)dictionaryForKey:(NSString*)defaultName
+{
+    id dictionaryObj = data[defaultName];
+
+    if (![dictionaryObj isKindOfClass:[NSDictionary class]]) {
+        return nil;
+    }
+
+    return dictionaryObj;
+}
+
+- (NSData*)dataForKey:(NSString*)defaultName
+{
+    id dataObj = data[defaultName];
+
+    if (![dataObj isKindOfClass:[NSData class]]) {
+        return nil;
+    }
+
+    return dataObj;
+}
+
+- (NSArray*)stringArrayForKey:(NSString*)defaultName
+{
+    NSArray* arrayObject = [self arrayForKey:defaultName];
+
+    if (nil == arrayObject) {
+        return nil;
+    }
+
+    for (id obj in arrayObject) {
+        if (![obj isKindOfClass:[NSString class]]) {
+            return nil;
+        }
+    }
+
+    return arrayObject;
+}
+
 - (NSInteger)integerForKey:(NSString*)defaultName
 {
     return [[data objectForKey:defaultName] integerValue];

@@ -60,6 +60,36 @@
     XCTAssertEqualWithAccuracy([self.defaults floatForKey:@"test"], 0.42, 0.01);
 }
 
+- (void)testAraryForKey
+{
+    [self.defaults setObject:@[] forKey:@"test"];
+    XCTAssertEqualObjects([self.defaults arrayForKey:@"test"], @[]);
+
+    [self.defaults setObject:@"not an array" forKey:@"test1"];
+    XCTAssertNil([self.defaults arrayForKey:@"test1"]);
+}
+
+- (void)testDictionaryForKey
+{
+    [self.defaults setObject:@{} forKey:@"test"];
+    XCTAssertEqualObjects([self.defaults dictionaryForKey:@"test"], @{});
+
+    [self.defaults setObject:@"not a dictionary" forKey:@"test1"];
+    XCTAssertNil([self.defaults dictionaryForKey:@"test1"]);
+}
+
+- (void)testStringArrayForKey
+{
+    [self.defaults setObject:@[] forKey:@"test"];
+    XCTAssertEqualObjects([self.defaults stringArrayForKey:@"test"], @[]);
+
+    [self.defaults setObject:@[ @"string" ] forKey:@"test1"];
+    XCTAssertEqualObjects([self.defaults stringArrayForKey:@"test1"], @[ @"string" ]);
+
+    [self.defaults setObject:@[ @"string", @10 ] forKey:@"test2"];
+    XCTAssertNil([self.defaults stringArrayForKey:@"test2"]);
+}
+
 - (void)testRemoveObject
 {
     NSString* obj = @"Object";
