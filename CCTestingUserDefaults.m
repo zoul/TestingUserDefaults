@@ -22,32 +22,32 @@
 
 - (void)setObject:(id)value forKey:(NSString*)defaultName
 {
-    [data setObject:value forKey:defaultName];
+    data[defaultName] = value;
 }
 
 - (void)setInteger:(NSInteger)value forKey:(NSString*)defaultName
 {
-    [data setObject:@(value) forKey:defaultName];
+    data[defaultName] = @(value);
 }
 
 - (void)setFloat:(float)value forKey:(NSString*)defaultName
 {
-    [data setObject:@(value) forKey:defaultName];
+    data[defaultName] = @(value);
 }
 
 - (void)setBool:(BOOL)value forKey:(NSString*)defaultName
 {
-    [data setObject:@(value) forKey:defaultName];
+    data[defaultName] = @(value);
 }
 
 - (void)setDouble:(double)value forKey:(NSString*)defaultName
 {
-    [data setObject:@(value) forKey:defaultName];
+    data[defaultName] = @(value);
 }
 
 - (void)setURL:(NSURL*)url forKey:(NSString*)defaultName
 {
-    [data setObject:url forKey:defaultName];
+    data[defaultName] = url;
 }
 
 - (void)removeObjectForKey:(NSString*)defaultName
@@ -64,7 +64,7 @@
 
 - (id)objectForKey:(NSString*)defaultName
 {
-    return [data objectForKey:defaultName];
+    return data[defaultName];
 }
 
 - (NSString*)stringForKey:(NSString*)defaultName
@@ -129,22 +129,22 @@
 
 - (NSInteger)integerForKey:(NSString*)defaultName
 {
-    return [[data objectForKey:defaultName] integerValue];
+    return [data[defaultName] integerValue];
 }
 
 - (float)floatForKey:(NSString*)defaultName
 {
-    return [[data objectForKey:defaultName] floatValue];
+    return [data[defaultName] floatValue];
 }
 
 - (double)doubleForKey:(NSString*)defaultName
 {
-    return [[data objectForKey:defaultName] doubleValue];
+    return [data[defaultName] doubleValue];
 }
 
 - (BOOL)boolForKey:(NSString*)defaultName
 {
-    return [[data objectForKey:defaultName] boolValue];
+    return [data[defaultName] boolValue];
 }
 
 @end
