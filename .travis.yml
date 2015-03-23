@@ -1,3 +1,4 @@
 language: objective-c
 xcode_project: CCTestingUserDefaults.xcodeproj
 xcode_scheme: CCTestingUserDefaults
+xcode_sdk: iphonesimulator8.1
