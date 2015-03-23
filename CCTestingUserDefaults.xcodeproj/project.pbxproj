@@ -39,8 +39,7 @@
 
 /* Begin PBXFileReference section */
 		D6034FE019C213C3006BF900 /* CCTestingUserDefaultsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTestingUserDefaultsTests.m; path = CCTestingUserDefaultsTests/CCTestingUserDefaultsTests.m; sourceTree = SOURCE_ROOT; };
-		D6034FE219C213D7006BF900 /* CCTestingUserDefaultsTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "CCTestingUserDefaultsTests-Info.plist"; path = "CCTestingUserDefaultsTests/CCTestingUserDefaultsTests-Info.plist"; sourceTree = SOURCE_ROOT; };
-		D6034FE419C213D7006BF900 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = CCTestingUserDefaultsTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		D6034FE219C213D7006BF900 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CCTestingUserDefaultsTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		D61C367219C21C2000831603 /* CCTestingUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCTestingUserDefaults.h; path = Classes/CCTestingUserDefaults.h; sourceTree = SOURCE_ROOT; };
 		D61C367319C21C2000831603 /* CCTestingUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCTestingUserDefaults.m; path = Classes/CCTestingUserDefaults.m; sourceTree = SOURCE_ROOT; };
 		D647630B19C208BA00F28E5B /* libCCTestingUserDefaults.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCCTestingUserDefaults.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,18 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				D6034FE019C213C3006BF900 /* CCTestingUserDefaultsTests.m */,
-				D647632519C208BA00F28E5B /* Supporting Files */,
+				D6034FE219C213D7006BF900 /* Info.plist */,
 			);
 			path = TestingUserDefaultsTests;
-			sourceTree = "<group>";
-		};
-		D647632519C208BA00F28E5B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D6034FE219C213D7006BF900 /* CCTestingUserDefaultsTests-Info.plist */,
-				D6034FE319C213D7006BF900 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,17 +224,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		D6034FE319C213D7006BF900 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6034FE419C213D7006BF900 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		D647632C19C208BA00F28E5B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -352,7 +331,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "CCTestingUserDefaultsTests/CCTestingUserDefaultsTests-Info.plist";
+				INFOPLIST_FILE = CCTestingUserDefaultsTests/Info.plist;
 				PRODUCT_NAME = CCTestingUserDefaultsTests;
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -368,7 +347,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = "CCTestingUserDefaultsTests/CCTestingUserDefaultsTests-Info.plist";
+				INFOPLIST_FILE = CCTestingUserDefaultsTests/Info.plist;
 				PRODUCT_NAME = CCTestingUserDefaultsTests;
 				WRAPPER_EXTENSION = xctest;
 			};
