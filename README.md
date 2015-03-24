@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/zoul/TestingUserDefaults.svg?branch=master)](https://travis-ci.org/zoul/TestingUserDefaults)
+
 This class is a simple `NSUserDefaults` replacement that can be used in tests. It does not persist any changes, so that each test can start with precisely controlled defaults environment.
 
 ```objective-c
