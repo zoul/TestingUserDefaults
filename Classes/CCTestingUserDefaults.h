@@ -28,6 +28,6 @@
 
 @interface NSUserDefaults (Testing)
 
-+ (id)transientDefaults;
++ (NSUserDefaults *)transientDefaults;
 
 @end

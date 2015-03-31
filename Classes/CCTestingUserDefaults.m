@@ -153,9 +153,9 @@
 
 @implementation NSUserDefaults (Testing)
 
-+ (id)transientDefaults
++ (NSUserDefaults *)transientDefaults
 {
-    return [[CCTestingUserDefaults alloc] init];
+    return (NSUserDefaults *)[[CCTestingUserDefaults alloc] init];
 }
 
 @end
