@@ -1,3 +1,7 @@
+0.1.2 2015-4-7
+    - Better Swift support [Jakob Jensen]
+    - Added OS X support [Jakob Jensen]
+
 0.1.1 2015-3-23
     - Added a license file.
     - Fixed Travis CI builds.
