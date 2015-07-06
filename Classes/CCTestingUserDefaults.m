@@ -147,6 +147,13 @@
     return [data[defaultName] boolValue];
 }
 
+#pragma mark KVC (Forwarding)
+
+- (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
+    
+    [data addObserver:observer forKeyPath:keyPath options:options context:context];
+}
+
 @end
 
 #pragma mark NSUserDefaults Convenience
